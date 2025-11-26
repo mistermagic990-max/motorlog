@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #000;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-btn {
+  background-color: #d00000;
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+
+.promo {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.promo img {
+  max-width: 90%;
+  border-radius: 12px;
+}
+
+.promo-text {
+  margin-top: 10px;
+}
+
+.bonus-title {
+  background-color: #5a1c10;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.red {
+  color: red;
+}
+
+.form-container {
+  max-width: 320px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.switch-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch-buttons button {
+  flex: 1;
+  padding: 10px;
+  background: #1c1c1c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.switch-buttons .active {
+  background-color: #333;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.forgot {
+  color: white;
+  text-decoration: underline;
+  font-size: 14px;
+  align-self: flex-start;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.register-text {
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-text a {
+  color: red;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    width: 90%;
+  }
+}
