@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Загрузка...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -17,9 +18,10 @@
     }
 
     .logo {
-      width: 150px;
-      height: 150px;
-      background-image: url('logo.png'); /* Замените на ваш логотип */
+      width: 80vw; /* 80% ширины экрана */
+      max-width: 400px; /* но не больше 400px */
+      aspect-ratio: 1 / 1; /* сохраняем квадрат */
+      background-image: url('logo.png');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
